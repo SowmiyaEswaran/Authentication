@@ -1,0 +1,85 @@
+spring :
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        hikari:
+            connection-timeout: 10000
+            maximum-pool-size: 10
+            minimum-idle: 15
+            pool-name: HikariConnectionPool
+        password: 
+        url: jdbc:mysql://localhost:3306/auth?createDatabaseIfNotExist=true&useSSL=true
+        username: root
+    jpa:
+        generate-ddl: true
+        hibernate:
+            ddl-auto: update
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.MySQLDialect
+                format_sql: true
+                id:
+                    new_generator_mappings: false
+    mail:
+       host: smtp.gmail.com
+       port: 587
+       username: mytuitioncenterdev@gmail.com
+       password: vtwo cdrf csms smhd
+       properties:
+         mail:
+           smtp:
+             auth: true
+             starttls:
+               enable: true
+           debug: true
+  
+logging:
+  level:
+    s7:
+      application: WARN
+    org:
+      hibernate:
+         SQL: DEBUG
+  pattern: 
+    file: "%d{yyyy-MM-dd HH:mm:ss} {%thread} %-5level %logger{36} - %msg%n"
+  file: 
+    name : /root/mytuitioncenter_admin/log/mytuitioncenter_admin.log
+         
+#mytuitioncenterpasswordresetlocal  MyTuitionCenter@Development#Local           
+jwt:
+   token:
+       key:
+         emailVerification: TXlUdWl0aW9uQ2VudGVyQERldmVsb3BtZW50I0xvY2Fs
+         resetpassword: bXl0dWl0aW9uY2VudGVycGFzc3dvcmRyZXNldGxvY2Fs
+       expire:
+         login: 24
+         resetpassword: 24
+         emailverification: 24
+       bearer:
+         auth: eyJhbGciOiJIUzI1NiJ9.eyJlbnZpcm9ubWVudCI6ImxvY2FsIiwibW9kdWxlIjoiYXV0aCIsInByb2plY3QiOiJteXR1aXRpb25jZW50ZXIiLCJzdWIiOiJtdGNAbG9jYWwifQ.3iUV-nTMaei5_C2AKSwfRxzLIdZFZQgAIAhuNxaA-lI
+         switch: false
+      
+#MyTutioncenterHeaderKey@Local
+mytuitioncenter:
+   passwordReset:
+       url: http://localhost:3000/changepassword?token=
+   validateEmail:
+       url: http://localhost:3000/emailverification?token=
+   adminUrl: http://localhost:8091
+   authUrl: http://localhost:8092
+   clientAppUrl: http://localhost:8093
+   email:
+     subject:
+        resetpassword: Reset Your Password for MYTUITIONCENTER!
+        verificationemail: Welcome to MYTUITIONCENTER! Verify your Email
+     recipients: ""
+#    recipients: ""
+   twilio:
+     account-sid: 
+     auth-token: 
+     phone-number: 
+     expire-duration: 3m
+     message1: Dear Customer, your Mytuition Center Otp is
+     message2: for Signing Up. Thank you
+
+server:
+   port: 8092 
