@@ -14,7 +14,7 @@ import com.auth.service.SmsService;
 import lombok.extern.slf4j.Slf4j;
 
 @RestController
-@RequestMapping("/mytuitioncenter")
+@RequestMapping("/es")
 @Slf4j
 public class OTPController {
 

@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.ui.freemarker.FreeMarkerTemplateUtils;
 
 import com.auth.data.entity.UserDetails;
-import com.auth.exception.MyTuitionCenterAppException.EmailFailedException;
+import com.auth.exception.AppException.EmailFailedException;
 
 import freemarker.template.Configuration;
 import freemarker.template.Template;
@@ -31,14 +31,14 @@ public class EmailService {
 	@Value("${spring.mail.username}")
 	private String sender;
 	
-	@Value("${mytuitioncenter.email.subject.resetpassword}")
+	@Value("${es.email.subject.resetpassword}")
 	private String resetPasswordSubject;
 	
-	@Value("${mytuitioncenter.email.subject.verificationemail}")
+	@Value("${es.email.subject.verificationemail}")
 	private String verificationEmailSubject;
 
 	//to be removed after qa
-	@Value("${mytuitioncenter.email.recipients}")
+	@Value("${es.email.recipients}")
     private String recipientString;
 	
 	@Autowired

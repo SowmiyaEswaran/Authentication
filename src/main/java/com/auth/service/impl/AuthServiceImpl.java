@@ -20,13 +20,13 @@ import com.auth.data.entity.LoginCredential;
 import com.auth.data.entity.Roles;
 import com.auth.data.entity.UserDetails;
 import com.auth.data.response.SuccessResponse;
-import com.auth.exception.MyTuitionCenterAppException.AccountLockedException;
-import com.auth.exception.MyTuitionCenterAppException.PasswordIncorrectException;
-import com.auth.exception.MyTuitionCenterAppException.SetupPasswordException;
-import com.auth.exception.MyTuitionCenterAppException.TokenExpiredException;
-import com.auth.exception.MyTuitionCenterAppException.TokenUnavailableException;
-import com.auth.exception.MyTuitionCenterAppException.UserNotActiveException;
-import com.auth.exception.MyTuitionCenterAppException.UserNotFoundException;
+import com.auth.exception.AppException.AccountLockedException;
+import com.auth.exception.AppException.PasswordIncorrectException;
+import com.auth.exception.AppException.SetupPasswordException;
+import com.auth.exception.AppException.TokenExpiredException;
+import com.auth.exception.AppException.TokenUnavailableException;
+import com.auth.exception.AppException.UserNotActiveException;
+import com.auth.exception.AppException.UserNotFoundException;
 import com.auth.repository.AuthRepository;
 import com.auth.repository.RolesRepository;
 import com.auth.repository.UserDetailsRepository;
@@ -58,10 +58,10 @@ public class AuthServiceImpl implements AuthService {
 	@Autowired
 	JwtService jwtService;
 
-	@Value("${mytuitioncenter.passwordReset.url}")
+	@Value("${es.passwordReset.url}")
 	private String passwordResetUrl;
 	
-	@Value("${mytuitioncenter.validateEmail.url}")
+	@Value("${es.validateEmail.url}")
 	private String ValidateEmailUrl;
 
 	@Autowired

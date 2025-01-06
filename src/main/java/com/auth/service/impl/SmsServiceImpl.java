@@ -16,7 +16,7 @@ import com.auth.data.dto.OTPResponseDTO;
 import com.auth.data.entity.OTPData;
 import com.auth.data.entity.OTPRequest;
 import com.auth.data.entity.OTPValidationRequest;
-import com.auth.exception.MyTuitionCenterAppException.InformationMismatchException;
+import com.auth.exception.AppException.InformationMismatchException;
 import com.auth.service.SmsService;
 import com.twilio.Twilio;
 import com.twilio.rest.api.v2010.account.Message;

@@ -11,36 +11,36 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class MyTuitionCenterAppException  extends RuntimeException {
+public class AppException  extends RuntimeException {
 
 	private static final long serialVersionUID = -720664400716034134L;
 	protected int httpErrorCode = SC_OK;
 	protected int errorCode = Integer.MAX_VALUE;
 	protected String errorCodeValue = null;
 	
-	public MyTuitionCenterAppException() {
+	public AppException() {
 		super();
 	}
 
-	public MyTuitionCenterAppException(String message, Throwable cause) {
+	public AppException(String message, Throwable cause) {
 		super(message, cause);
 	}
 
-	public MyTuitionCenterAppException(String message) {
+	public AppException(String message) {
 		super(message);
 	}
 
-	public MyTuitionCenterAppException(Throwable cause) {
+	public AppException(Throwable cause) {
 		super(cause);
 	}
 	
-	public MyTuitionCenterAppException(int errCode, int httpErrCode, String message) {
+	public AppException(int errCode, int httpErrCode, String message) {
 		this(message);
 		errorCode = errCode;
 		httpErrorCode = httpErrCode;
 	}
 	
-	public static final class UserNotFoundException extends MyTuitionCenterAppException {
+	public static final class UserNotFoundException extends AppException {
 		private static final long serialVersionUID = 1L;
 
 		public UserNotFoundException() {
@@ -50,7 +50,7 @@ public class MyTuitionCenterAppException  extends RuntimeException {
 			super(5001, HttpStatus.SC_NOT_FOUND, message);
 		}
 	}
-	public static final class PasswordIncorrectException extends MyTuitionCenterAppException {
+	public static final class PasswordIncorrectException extends AppException {
 		private static final long serialVersionUID = 1L;
 
 		public PasswordIncorrectException() {
@@ -60,42 +60,42 @@ public class MyTuitionCenterAppException  extends RuntimeException {
 			super(5002, HttpStatus.SC_NOT_FOUND, message +" " +CommonConstants.PASSWORD_INCORRET_ATTEMPT);
 			}
 	}
-	public static final class TokenExpiredException extends MyTuitionCenterAppException {
+	public static final class TokenExpiredException extends AppException {
 		private static final long serialVersionUID = 1L;
 
 		public TokenExpiredException() {
 			super(5003, HttpStatus.SC_NOT_FOUND, CommonConstants.TOKEN_EXPIRED);
 		}
 	}
-	public static final class TokenUnavailableException extends MyTuitionCenterAppException {
+	public static final class TokenUnavailableException extends AppException {
 		private static final long serialVersionUID = 1L;
 
 		public TokenUnavailableException() {
 			super(5004, HttpStatus.SC_NOT_FOUND, CommonConstants.TOKEN_UNAVAILABLE);
 		}
 	}
-	public static final class StudentNotFoundException extends MyTuitionCenterAppException {
+	public static final class StudentNotFoundException extends AppException {
 		private static final long serialVersionUID = 1L;
 
 		public StudentNotFoundException() {
 			super(5005, HttpStatus.SC_NOT_FOUND, CommonConstants.STUDENT_NOT_FOUND);
 		}
 	}
-	public static final class UserNotActiveException extends MyTuitionCenterAppException {
+	public static final class UserNotActiveException extends AppException {
 		private static final long serialVersionUID = 1L;
 
 		public UserNotActiveException() {
 			super(5006, HttpStatus.SC_NOT_FOUND, CommonConstants.USER_NOT_ACTIVE);
 		}
 	}
-	public static final class EmailFailedException extends MyTuitionCenterAppException {
+	public static final class EmailFailedException extends AppException {
 		private static final long serialVersionUID = 1L;
 
 		public EmailFailedException() {
 			super(5007, HttpStatus.SC_SERVICE_UNAVAILABLE, CommonConstants.EMAIL_FAILED);
 		}
 	}
-	public static final class InvalidHeaderException extends MyTuitionCenterAppException {
+	public static final class InvalidHeaderException extends AppException {
 		private static final long serialVersionUID = 1L;
 
 		public InvalidHeaderException(String message) {
@@ -103,7 +103,7 @@ public class MyTuitionCenterAppException  extends RuntimeException {
 		}
 	}
 
-	public static final class AccountLockedException extends MyTuitionCenterAppException {
+	public static final class AccountLockedException extends AppException {
 		private static final long serialVersionUID = 1L;
 
 		public AccountLockedException() {
@@ -113,7 +113,7 @@ public class MyTuitionCenterAppException  extends RuntimeException {
 			super(5009, HttpStatus.SC_NOT_FOUND, message);
 		}
 	}
-	public static final class InformationMismatchException extends MyTuitionCenterAppException {
+	public static final class InformationMismatchException extends AppException {
 		private static final long serialVersionUID = 1L;
 
 		public InformationMismatchException() {
@@ -123,7 +123,7 @@ public class MyTuitionCenterAppException  extends RuntimeException {
 			super(5010, HttpStatus.SC_NOT_FOUND, message);
 		}
 	}
-	public static final class SetupPasswordException extends MyTuitionCenterAppException {
+	public static final class SetupPasswordException extends AppException {
 		private static final long serialVersionUID = 1L;
 
 		public SetupPasswordException() {

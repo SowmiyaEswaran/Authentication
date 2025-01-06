@@ -22,7 +22,7 @@ public class GlobalCorsConfig implements WebMvcConfigurer {
 
 		if(bearerSwitch) {
 			registry.addInterceptor(headerInterceptor)
-			.addPathPatterns("/mytuitioncenter/**");
+			.addPathPatterns("/**");
 		}
 		else {
 			registry.addInterceptor(headerInterceptor)

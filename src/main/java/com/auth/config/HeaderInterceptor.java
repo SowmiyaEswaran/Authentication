@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 
 import com.auth.common.CommonConstants;
-import com.auth.exception.MyTuitionCenterAppException.InvalidHeaderException;
+import com.auth.exception.AppException.InvalidHeaderException;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;

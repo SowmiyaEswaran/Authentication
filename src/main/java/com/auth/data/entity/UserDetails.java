@@ -31,10 +31,6 @@ public class UserDetails {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_id_seq")
-	@GenericGenerator(name = "user_id_seq", strategy = "com.snipe.myTuitionCenter.data.util.StringPrefixedSequenceIdGenerator", parameters = {
-			@Parameter(name = StringPrefixedSequenceIdGenerator.INCREMENT_PARAM, value = "1"),
-			@Parameter(name = StringPrefixedSequenceIdGenerator.VALUE_PREFIX_PARAMETER, value = "U_"),
-			@Parameter(name = StringPrefixedSequenceIdGenerator.NUMBER_FORMAT_PARAMETER, value = "%05d") })
 	@Column(name = "user_id")
 	private String userId;
 

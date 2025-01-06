@@ -3,7 +3,7 @@ package com.auth.data.response;
 import static com.auth.common.Status.*;
 
 import com.auth.common.Status;
-import com.auth.exception.MyTuitionCenterAppException;
+import com.auth.exception.AppException;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
@@ -31,8 +31,8 @@ public class GenericResponse <T>{
 		if (exception == null) {
 			return;
 		}
-		if(exception instanceof MyTuitionCenterAppException) {
-			errorCode = ((MyTuitionCenterAppException) exception).getErrorCode();
+		if(exception instanceof AppException) {
+			errorCode = ((AppException) exception).getErrorCode();
 		}
 		exCode = exception.getClass().getSimpleName();
 		status= FAILURE;

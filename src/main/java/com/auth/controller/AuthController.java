@@ -17,7 +17,7 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 
 @RestController
-@RequestMapping("/mytuitioncenter")
+@RequestMapping("/es")
 @Tag(name = "Auth", description = "signup and Login for Admin/Student/Tutor")
 public class AuthController {
 	

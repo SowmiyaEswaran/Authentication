@@ -1,7 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Reset Your Password for MYTUITIONCENTER!</title>
+<title>Reset Your Password for TEST!</title>
 </head>
 
 <body>
@@ -27,7 +27,7 @@
         						If you have any questions or need further assistance, please contact our support team.<br><br><br>
 
                                 Best regards,<br>
-                                MYTUITIONCENTER Team<br>
+                                 Team<br>
                                 <br>
                                 <br>
                                 <br>

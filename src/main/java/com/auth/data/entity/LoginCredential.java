@@ -28,13 +28,7 @@ public class LoginCredential {
 	
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "login_id_seq")
-	@GenericGenerator( name = "login_id_seq", strategy =  "com.snipe.myTuitionCenter.data.util.StringPrefixedSequenceIdGenerator",
-	parameters = {
-			@Parameter(name = StringPrefixedSequenceIdGenerator.INCREMENT_PARAM, value = "1"),
-			@Parameter(name = StringPrefixedSequenceIdGenerator.VALUE_PREFIX_PARAMETER, value = "U_"),
-			@Parameter(name = StringPrefixedSequenceIdGenerator.NUMBER_FORMAT_PARAMETER,  value = "%05d") })
-	
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "login_id_seq")	
 	@Column(name = "login_id")
 	private String loginId;
 

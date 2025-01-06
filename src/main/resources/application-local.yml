@@ -22,7 +22,7 @@ spring :
     mail:
        host: smtp.gmail.com
        port: 587
-       username: mytuitioncenterdev@gmail.com
+       username: 
        password: vtwo cdrf csms smhd
        properties:
          mail:
@@ -42,9 +42,8 @@ logging:
   pattern: 
     file: "%d{yyyy-MM-dd HH:mm:ss} {%thread} %-5level %logger{36} - %msg%n"
   file: 
-    name : /root/mytuitioncenter_admin/log/mytuitioncenter_admin.log
+    name : /root/es_auth/log/es_auth.log
          
-#mytuitioncenterpasswordresetlocal  MyTuitionCenter@Development#Local           
 jwt:
    token:
        key:
@@ -58,8 +57,8 @@ jwt:
          auth: eyJhbGciOiJIUzI1NiJ9.eyJlbnZpcm9ubWVudCI6ImxvY2FsIiwibW9kdWxlIjoiYXV0aCIsInByb2plY3QiOiJteXR1aXRpb25jZW50ZXIiLCJzdWIiOiJtdGNAbG9jYWwifQ.3iUV-nTMaei5_C2AKSwfRxzLIdZFZQgAIAhuNxaA-lI
          switch: false
       
-#MyTutioncenterHeaderKey@Local
-mytuitioncenter:
+
+es:
    passwordReset:
        url: http://localhost:3000/changepassword?token=
    validateEmail:
@@ -69,8 +68,8 @@ mytuitioncenter:
    clientAppUrl: http://localhost:8093
    email:
      subject:
-        resetpassword: Reset Your Password for MYTUITIONCENTER!
-        verificationemail: Welcome to MYTUITIONCENTER! Verify your Email
+        resetpassword: Reset Your Password for TEST!
+        verificationemail: Welcome to TEST! Verify your Email
      recipients: ""
 #    recipients: ""
    twilio:
@@ -78,7 +77,7 @@ mytuitioncenter:
      auth-token: 
      phone-number: 
      expire-duration: 3m
-     message1: Dear Customer, your Mytuition Center Otp is
+     message1: Dear Customer, your Otp is
      message2: for Signing Up. Thank you
 
 server:

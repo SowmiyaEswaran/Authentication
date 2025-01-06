@@ -9,12 +9,12 @@ import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
 import com.auth.data.response.GenericResponse;
-import com.auth.exception.MyTuitionCenterAppException.*;
+import com.auth.exception.AppException.*;
 
 import jakarta.servlet.http.HttpServletResponse;
 
 @RestControllerAdvice
-public class MyTuitionCenterAppExceptionHandler extends ResponseEntityExceptionHandler {
+public class AppExceptionHandler extends ResponseEntityExceptionHandler {
 
     @ResponseStatus(HttpStatus.NOT_FOUND)
     @ExceptionHandler(UserNotFoundException.class)
